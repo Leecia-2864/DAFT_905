@@ -1,22 +1,3 @@
-SELECT * FROM sakila.applestore;
-select track_name 
-from sakila.applestore
-where user_rating = 4;
-select track_name, user_rating from sakila.applestore
-where track_name like "A%"
-order by user_rating  desc;
-select avg(price),user_rating from sakila.applestore
-group by user_rating
-order by user_rating  desc;
-select * from sakila.applestore
-where user_rating = 5;
-select avg(price),user_rating , sum(rating_count_tot)from sakila.applestore
-group by user_rating
-order by user_rating  desc;
-
-select prime_genre,avg(price),avg(user_rating) , sum(rating_count_tot)from sakila.applestore
-group by prime_genre
-order by avg(user_rating)  desc;
 
 ## 1 what are the different gernes
 use sakila;
@@ -80,6 +61,15 @@ group by user_rating
 order by user_rating  desc;
 ##In my opinion people do not care about the price of app, because we can see that there are more rating count with user ratinfg 4.5
 ## even though its average price is lower than apps with 5 star rating. same goes for apps with rating of 4 stars 
+
+update applestore
+SET track_name = 'META'
+WHERE track_name = 'facebook';
+
+select * from applestore
+WHERE track_name = 'META'
+
+
 
 
 

@@ -36,3 +36,5 @@ VALUES (1, 'felicia', "montreuil"),
  delete from students where name= "mathieu";
  alter table students
  add course varchar(20);
+ 
+ drop table students 
